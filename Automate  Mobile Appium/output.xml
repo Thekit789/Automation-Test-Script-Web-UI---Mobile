@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.4 on win32)" generated="2024-07-08T08:32:59.892392" rpa="false" schemaversion="5">
+<suite id="s1" name="MobileScript" source="C:\Users\Jacp-PC\Automate\Appium\MobileScript.robot">
+<test id="s1-t1" name="TC03 Test Add &amp; Remove Languages" line="26">
+<kw name="App Start" owner="Mobile_Keyword">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${RemoteURL}</arg>
+<arg>platformName=${PlatformName}</arg>
+<arg>platformVersion=${PlatformVersion}</arg>
+<arg>deviceName=${DeviceName}</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>newCommandTimeout=2500</arg>
+<arg>appPackage=${appPackage}</arg>
+<arg>appActivity=${appActivity}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-07-08T08:33:00.353389" elapsed="17.554089"/>
+</kw>
+<status status="PASS" start="2024-07-08T08:33:00.353389" elapsed="17.554089"/>
+</kw>
+<kw name="System Languages Select &amp; Remove" owner="Mobile_Keyword">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>500</arg>
+<arg>1900</arg>
+<arg>500</arg>
+<arg>300</arg>
+<arg>2000</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" start="2024-07-08T08:33:17.909478" elapsed="2.405469"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2024-07-08T08:33:17.909478" elapsed="2.405469"/>
+</iter>
+<iter>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>500</arg>
+<arg>1900</arg>
+<arg>500</arg>
+<arg>300</arg>
+<arg>2000</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" start="2024-07-08T08:33:20.315947" elapsed="2.338623"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-07-08T08:33:20.315947" elapsed="2.338623"/>
+</iter>
+<var>${i}</var>
+<value>2</value>
+<status status="PASS" start="2024-07-08T08:33:17.909478" elapsed="4.745092"/>
+</for>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:24.122409" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[8]/android.widget.RelativeLayout</msg>
+<arg>${locator_System}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T08:33:22.654570" elapsed="1.467839"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:24.125407" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[8]/android.widget.RelativeLayout'.</msg>
+<msg time="2024-07-08T08:33:24.377408" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[8]/android.widget.RelativeLayout</msg>
+<arg>${locator_System}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:24.123407" elapsed="0.254001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:27.189221" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout</msg>
+<arg>${locator_Languages-input}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T08:33:24.377408" elapsed="2.812816"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:27.192222" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout'.</msg>
+<msg time="2024-07-08T08:33:27.424224" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout</msg>
+<arg>${locator_Languages-input}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:27.190224" elapsed="0.235001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:28.839261" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout</msg>
+<arg>${locator_Languages-input}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T08:33:27.425225" elapsed="1.414036"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:28.841262" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout'.</msg>
+<msg time="2024-07-08T08:33:29.081259" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout</msg>
+<arg>${locator_Languages-input}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:28.839261" elapsed="0.241998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:30.368296" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button</msg>
+<arg>${locator_Menu_Add-Language}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T08:33:29.081259" elapsed="1.287037"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:30.370300" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button'.</msg>
+<msg time="2024-07-08T08:33:30.478296" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button</msg>
+<arg>${locator_Menu_Add-Language}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:30.368296" elapsed="0.110000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:32.081605" level="INFO">criteria is android:id/locale_search_menu
+criteria is android:id/locale_search_menu</msg>
+<arg>${locator_SearchLanguage}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T08:33:30.478296" elapsed="1.603309"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:32.084313" level="INFO">Clicking element 'id=android:id/locale_search_menu'.</msg>
+<msg time="2024-07-08T08:33:32.213775" level="INFO">criteria is android:id/locale_search_menu</msg>
+<arg>${locator_SearchLanguage}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:32.082140" elapsed="0.132635"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:33.829314" level="INFO">criteria is android:id/search_src_text</msg>
+<arg>${locator_Search-Text}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T08:33:32.214775" elapsed="1.614539"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:33.831315" level="INFO">Typing text 'Thai' into text field 'id=android:id/search_src_text'</msg>
+<msg time="2024-07-08T08:33:33.966319" level="INFO">criteria is android:id/search_src_text</msg>
+<arg>${locator_Search-Text}</arg>
+<arg>Thai</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:33.829314" elapsed="0.137005"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:35.071044" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Thai"]</msg>
+<arg>${locator_Select-Thai}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T08:33:33.967315" elapsed="1.103729"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:35.074043" level="INFO">Clicking element 'xpath=//android.widget.TextView[@content-desc="Thai"]'.</msg>
+<msg time="2024-07-08T08:33:36.257865" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Thai"]</msg>
+<arg>${locator_Select-Thai}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:35.072043" elapsed="1.185822"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:39.284836" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Thai (Thailand)"]
+xpath criteria: //android.widget.TextView[@content-desc="Thai (Thailand)"]</msg>
+<arg>${locator_Show-Thai-Language}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T08:33:36.257865" elapsed="3.026971"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:39.358837" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="More options"]</msg>
+<arg>${locator_Menu_Remove}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T08:33:39.284836" elapsed="0.074001"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:39.360838" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="More options"]'.</msg>
+<msg time="2024-07-08T08:33:39.542838" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="More options"]</msg>
+<arg>${locator_Menu_Remove}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:39.358837" elapsed="0.184001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:40.689838" level="INFO">criteria is android:id/content
+criteria is android:id/content</msg>
+<arg>${locator_Select-Remove}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T08:33:39.542838" elapsed="1.147000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:40.691838" level="INFO">Clicking element 'id=android:id/content'.</msg>
+<msg time="2024-07-08T08:33:41.800053" level="INFO">criteria is android:id/content</msg>
+<arg>${locator_Select-Remove}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:40.690839" elapsed="1.109214"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:41.879052" level="INFO">xpath criteria: //android.widget.CheckBox[@content-desc="Thai (Thailand)"]</msg>
+<arg>${locator_Check-Thai-Remove}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T08:33:41.800053" elapsed="0.078999"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:41.881053" level="INFO">Clicking element 'xpath=//android.widget.CheckBox[@content-desc="Thai (Thailand)"]'.</msg>
+<msg time="2024-07-08T08:33:42.078053" level="INFO">xpath criteria: //android.widget.CheckBox[@content-desc="Thai (Thailand)"]</msg>
+<arg>${locator_Check-Thai-Remove}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:41.879052" elapsed="0.199001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:42.706053" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Remove"]</msg>
+<arg>${locator_Remove}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T08:33:42.079052" elapsed="0.628001"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:42.709050" level="INFO">Clicking element 'xpath=//android.widget.TextView[@content-desc="Remove"]'.</msg>
+<msg time="2024-07-08T08:33:42.852050" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Remove"]</msg>
+<arg>${locator_Remove}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:42.707053" elapsed="0.144997"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:43.501559" level="INFO">criteria is android:id/button1
+criteria is android:id/button1</msg>
+<arg>${locator_Confirm-Remove}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T08:33:42.852050" elapsed="0.649509"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:43.504560" level="INFO">Clicking element 'id=android:id/button1'.</msg>
+<msg time="2024-07-08T08:33:43.607558" level="INFO">criteria is android:id/button1</msg>
+<arg>${locator_Confirm-Remove}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:43.502558" elapsed="0.105000"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:44.877074" level="INFO">xpath criteria: //android.widget.CheckBox[@content-desc="Thai (Thailand)"]</msg>
+<arg>${locator_Check-Thai-Remove}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` disappears from current page.</doc>
+<status status="PASS" start="2024-07-08T08:33:43.608559" elapsed="1.268515"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:44.879077" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Navigate up"]'.</msg>
+<msg time="2024-07-08T08:33:45.803564" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Navigate up"]</msg>
+<arg>${locator_btn-Back}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:44.877074" elapsed="0.926490"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:47.322564" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout</msg>
+<arg>${locator_Languages-input}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-07-08T08:33:45.804563" elapsed="1.519002"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:47.325564" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Navigate up"]'.</msg>
+<msg time="2024-07-08T08:33:47.491089" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Navigate up"]</msg>
+<arg>${locator_btn-Back}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:47.323565" elapsed="0.167524"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-08T08:33:50.491672" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-08T08:33:47.491089" elapsed="3.000583"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-08T08:33:50.493671" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Navigate up"]'.</msg>
+<msg time="2024-07-08T08:33:50.605189" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Navigate up"]</msg>
+<arg>${locator_btn-Back}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-08T08:33:50.491672" elapsed="0.113517"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>500</arg>
+<arg>900</arg>
+<arg>500</arg>
+<arg>2000</arg>
+<arg>2000</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" start="2024-07-08T08:33:50.606195" elapsed="2.549880"/>
+</kw>
+<var name="${n}">0</var>
+<status status="PASS" start="2024-07-08T08:33:50.606195" elapsed="2.549880"/>
+</iter>
+<iter>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>500</arg>
+<arg>900</arg>
+<arg>500</arg>
+<arg>2000</arg>
+<arg>2000</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" start="2024-07-08T08:33:53.157077" elapsed="2.308513"/>
+</kw>
+<var name="${n}">1</var>
+<status status="PASS" start="2024-07-08T08:33:53.157077" elapsed="2.308513"/>
+</iter>
+<iter>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>500</arg>
+<arg>900</arg>
+<arg>500</arg>
+<arg>2000</arg>
+<arg>2000</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" start="2024-07-08T08:33:55.465590" elapsed="2.301773"/>
+</kw>
+<var name="${n}">2</var>
+<status status="PASS" start="2024-07-08T08:33:55.465590" elapsed="2.301773"/>
+</iter>
+<var>${n}</var>
+<value>3</value>
+<status status="PASS" start="2024-07-08T08:33:50.605189" elapsed="7.162174"/>
+</for>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Settings</arg>
+<arg>5</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-07-08T08:33:57.767363" elapsed="0.763190"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-07-08T08:33:58.530553" elapsed="0.633029"/>
+</kw>
+<status status="PASS" start="2024-07-08T08:33:17.908475" elapsed="41.255107"/>
+</kw>
+<doc>ใช้สำหรับทดสอบการ Add &amp; Remove Languages</doc>
+<tag>Test Success</tag>
+<status status="PASS" start="2024-07-08T08:33:00.351392" elapsed="58.813191"/>
+</test>
+<status status="PASS" start="2024-07-08T08:32:59.894390" elapsed="59.273190"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Test Success</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="MobileScript">MobileScript</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
